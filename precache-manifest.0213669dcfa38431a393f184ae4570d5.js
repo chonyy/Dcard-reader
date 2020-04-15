@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e7cd34370a388ad60c6ebc47b4d0bc0a",
+    "revision": "0be7d96a1f29f4c3c6eac1b344b0dba9",
     "url": "/Dcard-reader/index.html"
   },
   {
-    "revision": "9f7cb5193791400e967c",
+    "revision": "e92120b8233a9b728dbb",
     "url": "/Dcard-reader/static/css/main.13414fe5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Dcard-reader/static/js/2.d32d5d76.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9f7cb5193791400e967c",
-    "url": "/Dcard-reader/static/js/main.58aefe48.chunk.js"
+    "revision": "e92120b8233a9b728dbb",
+    "url": "/Dcard-reader/static/js/main.9c2cd197.chunk.js"
   },
   {
     "revision": "3357d76913ff5b331245",

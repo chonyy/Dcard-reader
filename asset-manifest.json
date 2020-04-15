@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Dcard-reader/static/css/main.13414fe5.chunk.css",
-    "main.js": "/Dcard-reader/static/js/main.58aefe48.chunk.js",
-    "main.js.map": "/Dcard-reader/static/js/main.58aefe48.chunk.js.map",
+    "main.js": "/Dcard-reader/static/js/main.9c2cd197.chunk.js",
+    "main.js.map": "/Dcard-reader/static/js/main.9c2cd197.chunk.js.map",
     "runtime-main.js": "/Dcard-reader/static/js/runtime-main.69862144.js",
     "runtime-main.js.map": "/Dcard-reader/static/js/runtime-main.69862144.js.map",
     "static/js/2.d32d5d76.chunk.js": "/Dcard-reader/static/js/2.d32d5d76.chunk.js",
     "static/js/2.d32d5d76.chunk.js.map": "/Dcard-reader/static/js/2.d32d5d76.chunk.js.map",
     "index.html": "/Dcard-reader/index.html",
-    "precache-manifest.259de0e47333addbf5d27123a628e4dd.js": "/Dcard-reader/precache-manifest.259de0e47333addbf5d27123a628e4dd.js",
+    "precache-manifest.0213669dcfa38431a393f184ae4570d5.js": "/Dcard-reader/precache-manifest.0213669dcfa38431a393f184ae4570d5.js",
     "service-worker.js": "/Dcard-reader/service-worker.js",
     "static/css/main.13414fe5.chunk.css.map": "/Dcard-reader/static/css/main.13414fe5.chunk.css.map",
     "static/js/2.d32d5d76.chunk.js.LICENSE.txt": "/Dcard-reader/static/js/2.d32d5d76.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.69862144.js",
     "static/js/2.d32d5d76.chunk.js",
     "static/css/main.13414fe5.chunk.css",
-    "static/js/main.58aefe48.chunk.js"
+    "static/js/main.9c2cd197.chunk.js"
   ]
 }
