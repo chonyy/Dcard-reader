@@ -14,12 +14,55 @@
 
 > 💬 Dcard reader that fetched data from Dcard API.
 
+## Getting Started
+
 Hosted Website: https://chonyy.github.io/Dcard-reader/
 or simply run
 
 ```javascript
 npm start
 ```
+
+## Project Structure
+
+### Main File Structure
+
+```
+src
+└── Dcard
+    ├── Components
+    │   ├── Post.css
+    │   ├── Post.jsx
+    │   ├── ReaderModal.css
+    │   └── ReaderModal.jsx
+    ├── Dcard.css
+    └── Dcard.jsx
+```
+
+This project is composed of three components. One **parent** component, which is written in Dcard.jsx, and two **child** components, which is written in Post.jsx and ReaderModal.jsx.
+
+### Functionality of each component
+
+#### Dcard (Parent)
+
+-   Create reference to perform **infinite scroll**
+-   **Fetch** data only once in componentDidMount
+-   Map posts to return Post component
+-   Modify the state of reader modal
+
+#### Post (Child)
+
+-   Return post title and excerpt
+-   Open reader modal when clicked
+-   Call the function **openReaderModal(id)**, which is passed from the Dcard component
+
+#### ReaderModal (Child)
+
+-   Adding **hidden** class to modal if it's not opened
+-   Assign title and content only when the modal is opened to avoid undefined
+-   Return post title and content
+-   Close reader modal when the background is clicked
+-   Call the function **closeReaderModal()**, which is passed from the Dcard component
 
 ## Available Scripts
 

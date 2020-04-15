@@ -9,7 +9,7 @@ export default class ReaderModal extends Component {
             "reader-background " + (!readerModal.isOpened ? "hidden" : "");
         let readerClass =
             "post-reader " + (!readerModal.isOpened ? "hidden" : "");
-        //only assign title and content when the modal is opened to avoid undefined
+        //Assign title and content only when the modal is opened to avoid undefined
         let title = readerModal.isOpened ? readerModal.title : "";
         let content = readerModal.isOpened ? readerModal.content : "";
 
