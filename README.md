@@ -1,5 +1,5 @@
 <p align=center>
-    <img src="img/Dcard_Banner.png">
+    <img src="img/Dcard_Banner.png" width="480" height="282.6">
 </p>
 
 <p align=center>
@@ -15,6 +15,7 @@
 > 💬 Dcard reader that fetched data from Dcard API.
 
 Hosted Website: https://chonyy.github.io/Dcard-reader/
+
 or simply run
 
 ```javascript
