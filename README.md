@@ -1,5 +1,5 @@
 <p align=center>
-    <img src="img/Dcard_Banner.png" width="480" height="282.6">
+    <img src="img/Dcard_Banner.png" width="640" height="376.8">
 </p>
 
 <p align=center>
@@ -16,7 +16,7 @@
 
 Hosted Website: https://chonyy.github.io/Dcard-reader/
 
-or simply run
+Or simply run
 
 ```javascript
 npm start
