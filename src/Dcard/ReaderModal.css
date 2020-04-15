@@ -9,15 +9,13 @@
 }
 
 .post-reader {
-    overflow-y: scroll;
     position: fixed;
+    overflow-y: scroll;
     padding: 50px;
-    margin-bottom: 50px;
     top: 0;
-    left: 50%;
+    left: calc(50% - 25vw);
     width: 50vw;
-    height: 100vh;
-    margin-left: -25vw;
+    height: 100%;
     background-color: white;
 }
 
@@ -26,7 +24,11 @@
     font-weight: bold;
 }
 
-.hide {
+.reader-content {
+    padding: 10px 0 70px 0;
+}
+
+.hidden {
     display: none;
 }
 

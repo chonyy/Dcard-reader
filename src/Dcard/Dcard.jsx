@@ -10,8 +10,10 @@ export default class Dcard extends Component {
 
     constructor(props) {
         super(props);
-        this.openReader = this.openReader.bind(this);
-        this.closeReader = this.closeReader.bind(this);
+        //binding functions
+        this.openReaderModal = this.openReaderModal.bind(this);
+        this.closeReaderModal = this.closeReaderModal.bind(this);
+        //creating reference to perform infinite scroll
         this.myref = React.createRef();
         this.state = {
             posts: [],
@@ -25,8 +27,7 @@ export default class Dcard extends Component {
         };
 
         this.intersectionObserver = new IntersectionObserver((entries) => {
-            var ratio = entries[0].intersectionRatio;
-
+            let ratio = entries[0].intersectionRatio;
             //ratio will be 1 when scrollng to buttom
             if (ratio > 0)
                 this.setState({
@@ -35,7 +36,21 @@ export default class Dcard extends Component {
         });
     }
 
-    openReader(id) {
+    componentDidMount() {
+        this.intersectionObserver.observe(this.myref.current);
+        //fetching data only once at the beginning
+        fetch("https://www.dcard.tw/_apicors/posts?popular=true")
+            .then((res) => res.json())
+            .then((json) => {
+                this.setState({
+                    isLoaded: true,
+                    posts: json,
+                });
+            });
+    }
+
+    openReaderModal(id) {
+        //fectching post data from API
         fetch(`https://www.dcard.tw/_apicors/posts/${id}`)
             .then((res) => res.json())
             .then((json) => {
@@ -48,29 +63,17 @@ export default class Dcard extends Component {
                     },
                 });
             });
-
+        //when modal is shown, disable scrolling on body
         document.body.style.overflow = "hidden";
     }
 
-    closeReader() {
+    closeReaderModal() {
         document.body.style.overflowY = "scroll";
         this.setState({ readerModal: { isOpened: false } });
     }
 
-    componentDidMount() {
-        this.intersectionObserver.observe(this.myref.current);
-
-        fetch("https://www.dcard.tw/_apicors/posts?popular=true")
-            .then((res) => res.json())
-            .then((json) => {
-                this.setState({
-                    isLoaded: true,
-                    posts: json,
-                });
-            });
-    }
-
     render() {
+        //getting specific number of posts depending on how much the user scrolled
         let posts = this.state.posts.slice(0, this.state.postsDisplayed);
         let readerModal = this.state.readerModal;
 
@@ -81,14 +84,14 @@ export default class Dcard extends Component {
                         <Post
                             key={post.id}
                             data={post}
-                            openReader={this.openReader}
+                            openReaderModal={this.openReaderModal}
                         ></Post>
                     ))}
                 </div>
                 <ReaderModal
                     key={readerModal.id}
                     readerContent={readerModal}
-                    closeReader={this.closeReader}
+                    closeReaderModal={this.closeReaderModal}
                 ></ReaderModal>
                 {/* ref guarantees to be updated before compoenentDidMount */}
                 <div ref={this.myref}></div>
