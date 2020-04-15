@@ -3,7 +3,7 @@ import "./ReaderModal.css";
 
 export default class ReaderModal extends Component {
     render() {
-        let readerModal = this.props.readerContent;
+        let readerModal = this.props.readerModal;
         //adding hidden class to modal if it's not opened
         let backgroundClass =
             "reader-background " + (!readerModal.isOpened ? "hidden" : "");

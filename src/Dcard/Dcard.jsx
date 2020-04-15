@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Post from "./Post";
-import ReaderModal from "./ReaderModal";
+import Post from "./Components/Post";
+import ReaderModal from "./Components/ReaderModal";
 import "./Dcard.css";
 
 export default class Dcard extends Component {
@@ -20,7 +20,7 @@ export default class Dcard extends Component {
             postsDisplayed: 6,
             readerModal: {
                 isOpened: false,
-                id: 0,
+                postId: 0,
                 title: "",
                 content: "",
             },
@@ -57,7 +57,7 @@ export default class Dcard extends Component {
                 this.setState({
                     readerModal: {
                         isOpened: true,
-                        id: json.id,
+                        postId: json.id,
                         title: json.title,
                         content: json.content,
                     },
@@ -89,8 +89,8 @@ export default class Dcard extends Component {
                     ))}
                 </div>
                 <ReaderModal
-                    key={readerModal.id}
-                    readerContent={readerModal}
+                    key={readerModal.postId}
+                    readerModal={readerModal}
                     closeReaderModal={this.closeReaderModal}
                 ></ReaderModal>
                 {/* ref guarantees to be updated before compoenentDidMount */}
