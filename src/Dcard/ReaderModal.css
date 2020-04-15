@@ -1,0 +1,35 @@
+.reader-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    background-color: rgba(0, 26, 41, 0.7);
+}
+
+.post-reader {
+    overflow-y: scroll;
+    position: fixed;
+    padding: 50px;
+    margin-bottom: 50px;
+    top: 0;
+    left: 50%;
+    width: 50vw;
+    height: 100vh;
+    margin-left: -25vw;
+    background-color: white;
+}
+
+.reader-title {
+    font-size: 1.6vw;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+p {
+    margin: 10px 0;
+}

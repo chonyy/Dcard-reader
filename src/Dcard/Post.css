@@ -1,8 +1,20 @@
 .post-container {
-    padding: 30px
+    padding: 0px 40px;
+}
+
+.content-container {
+    padding: 35px 25px;
+    cursor: pointer;
+    border-bottom: 1px solid lightgray;
 }
 
 .title {
     font-weight: bold;
-    font-size: 1.5vw;
+    padding-bottom: 5px;
+    font-size: 1vw;
+}
+
+.excerpt {
+    font-size: 0.8vw;
+    color: gray;
 }
