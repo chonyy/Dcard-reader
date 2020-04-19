@@ -67,9 +67,12 @@ export default class Dcard extends Component {
         document.body.style.overflow = "hidden";
     }
 
-    closeReaderModal() {
-        document.body.style.overflowY = "scroll";
-        this.setState({ readerModal: { isOpened: false } });
+    closeReaderModal(e) {
+        let clickedElement = e.target.getAttribute("element");
+        if (clickedElement === "modal") {
+            document.body.style.overflowY = "scroll";
+            this.setState({ readerModal: { isOpened: false } });
+        }
     }
 
     render() {
